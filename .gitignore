@@ -1,1 +1,7 @@
 JavaStudy/target/
+LearnScala/project/
+LearnScala/out
+LearnClojure/lib
+*.iml
+*.idea/
+*/target/

@@ -1,5 +1,10 @@
 package site.saishin.study;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Consumer;
+
 /**
  * Hello world!
  *
@@ -8,7 +13,7 @@ public class Lambda
 {
     public static void main( String... args )
     {
-        new Lambda().learn();
+        new Lambda().learn4();
     }
 
     void learn() {
@@ -49,6 +54,35 @@ public class Lambda
         sample(()-> System.out.println("テスト"));
     }
 
+	void learn3() {
+		sample(() -> {
+			try {
+				throw new Exception();
+			} catch (Exception e) {
+				e.printStackTrace();
+				//例外が発生した場合はラムダ内で処理する
+			}
+		});
+		
+	}
+	void learn4() {
+		sample4(l->l = new ArrayList<>());
+	}
+	void sample4(Consumer<List<Integer>> cons) {
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		cons.accept(list);
+		System.out.println(list.size());
+	}
+	void sample(SampleFunctionalInterface3<String> func) {
+		try {
+			func.method(null);
+		} catch (Exception e) {
+			e.printStackTrace();
+			//チェック例外をキャッチ
+		}
+	}
     void sample(SampleFunctionalInterface sfi) {
         sfi.method();
     }
@@ -62,15 +96,16 @@ public class Lambda
         void method();
     }
     @FunctionalInterface
-    interface SampleFunctionalInterface4 {
-        int method(CharSequence cs);
-    }
-    @FunctionalInterface
     interface SampleFunctionalInterface2<T> {
         T method();
     }
     @FunctionalInterface
     interface SampleFunctionalInterface3<T> {
-        void method(T t);
+        void method(T t) throws Exception;
     }
+    @FunctionalInterface
+    interface SampleFunctionalInterface4 {
+        int method(CharSequence cs);
+    }
+
 }

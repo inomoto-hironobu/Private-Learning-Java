@@ -12,7 +12,7 @@ public class App
 {
     public static void main( String... args )
     {
-        new App().collection();
+        new App().learn3();
     }
     void helloworld() {
     	System.out.println( "Hello World!" );
@@ -32,6 +32,20 @@ public class App
         };
         sampleInstanceMethod1(sample1);
         SampleFunctionalInterface sf = (cs) -> {return cs.length();};
+    }
+    //nullは何にでもキャストできる
+    void learn3() {
+    	Number n = (Number) null;
+    	if(n == null) {
+    		System.out.println("null");
+    	}
+    }
+    //キャストの確認基底クラスへのキャストは問題ない
+    void learn2() {
+    	Number n;
+    	Object o = Integer.valueOf(1);
+    	n = (Number) o;
+    	System.out.println(n);
     }
     void sampleInstanceMethod1(SampleFunctionalInterface sf) {
         int i = sf.singleMethod("test");
