@@ -1,3 +1,0 @@
-Clojure
----
-[Home](../README.md)

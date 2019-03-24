@@ -1,3 +1,0 @@
-Scala
----
-[Home](../README.md)

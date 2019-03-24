@@ -1,3 +1,0 @@
-Java
----
-[Home](../README.md)

@@ -1,3 +1,0 @@
-Kotlin
----
-[Home](../README.md)
