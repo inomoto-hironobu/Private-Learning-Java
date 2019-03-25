@@ -1,7 +1,6 @@
-package site.saishin.study.java8;
+package site.saishin.study.java8.lambda;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 

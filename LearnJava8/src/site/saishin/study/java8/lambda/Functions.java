@@ -1,4 +1,4 @@
-package site.saishin.study.java8.functional;
+package site.saishin.study.java8.lambda;
 
 import java.util.function.Consumer;
 

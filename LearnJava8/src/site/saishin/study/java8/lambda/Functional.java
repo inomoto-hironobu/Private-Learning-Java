@@ -1,4 +1,4 @@
-package site.saishin.study.java8;
+package site.saishin.study.java8.lambda;
 
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
