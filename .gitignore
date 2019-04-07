@@ -3,3 +3,5 @@ LearnJava11/bin/
 *.iml
 *.idea/
 */target/
+.settings/
+*/nbproject/
