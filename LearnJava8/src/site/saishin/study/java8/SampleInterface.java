@@ -3,13 +3,15 @@ package site.saishin.study.java8;
  * 
  */
 public interface SampleInterface {
-	default void test() {
+	// default メソッド
+	default void defaultMethod() {
 		System.out.println("test");
 	}
+	// static メソッド
 	static void staticMethod() {
 		System.out.println("test");
 	}
-}
-interface Test {
+	//
+	void method();
 	
 }

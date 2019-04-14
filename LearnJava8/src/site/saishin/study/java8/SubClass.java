@@ -1,6 +1,8 @@
 package site.saishin.study.java8;
 
-public class SubClass extends SuperClass {
+import java.util.Arrays;
+
+public class SubClass extends BaseClass {
 	int privateField;
 	int packagePrivateField;
 	protected int protectedField;
@@ -43,5 +45,21 @@ public class SubClass extends SuperClass {
 	int getSupersProtectedPrivateField() {
 		//別のパッケージでもアクセスできる
 		return super.protectedField;
+	}
+	public static void main(String[] args) {
+		BaseClass superClass = new BaseClass(1,2,3);
+		superClass.test();
+		System.out.println(Arrays.toString(superClass.getFields()));
+		//
+		SubClass subClass = new SubClass(1,2,3);
+		subClass.test();
+		System.out.println(subClass.privateField);
+		System.out.println(subClass.packagePrivateField);
+		System.out.println(subClass.protectedField);
+		System.out.println(Arrays.toString(subClass.getFields()));
+		//サブクラスは基底クラスの型として変数定義できる
+		BaseClass superClass2 = new SubClass(4,5,6);
+		//型はSuperClassだが実行結果はSubClassクラスのメソッドが実行される
+		superClass2.test();
 	}
 }

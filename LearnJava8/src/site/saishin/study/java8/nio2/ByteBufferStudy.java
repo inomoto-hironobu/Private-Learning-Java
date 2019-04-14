@@ -1,4 +1,4 @@
-package site.saishin.study.java8.nio;
+package site.saishin.study.java8.nio2;
 
 import java.nio.ByteBuffer;
 

@@ -1,17 +1,17 @@
 package site.saishin.study.java8.subpackage;
-import site.saishin.study.java8.Enclosing;
+import site.saishin.study.java8.EnclosingClass;
 //packageだけでなくエンクロージングクラスも含める
-import site.saishin.study.java8.Enclosing.Inner;
+import site.saishin.study.java8.EnclosingClass.InnerClass;
 
 public class App {
 
 	public static void main(String[] args) {
-		Enclosing enclosing = new Enclosing();
+		EnclosingClass enclosing = new EnclosingClass();
 		//Enclosingクラスがインスタンス化されて初めてInnerクラスがインスタンス化される
 		//EnclosingインスタンスとInnerインスタンスは結び付いている
-		Inner inner = enclosing.createInner();
+		InnerClass inner = enclosing.createInner();
 		inner.test();
 	}
 	//publicな内部クラスをフィールドとして持てる
-	Inner inner;
+	InnerClass inner;
 }
