@@ -1,7 +1,12 @@
-LearnJava8/bin/
-LearnJava11/bin/
-*.iml
-*.idea/
-*/target/
-.settings/
-*/nbproject/
+**/bin/
+**/out/
+**/target/
+
+**/mydb
+## IntelliJ
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/usage.statistics.xml
+## NetBeans
+**/private/
+**/private.properties

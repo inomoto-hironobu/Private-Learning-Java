@@ -1,3 +1,0 @@
-Groovy
----
-[Home](../README.md)
