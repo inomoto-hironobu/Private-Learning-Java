@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE test [
+        <!ELEMENT hoge (#PCDATA)>
+        <!ATTLIST hoge name CDATA>
+        <!ELEMENT test (hoge)>
+        ]>
+<test xmlns="urn:test">
+    <hoge id="test">test</hoge>
+</test>

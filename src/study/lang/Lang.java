@@ -1,4 +1,4 @@
-package site.saishin.study.java8.lang;
+package study.lang;
 
 public class Lang {
 

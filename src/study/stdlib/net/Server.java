@@ -1,10 +1,7 @@
-package study;
+package study.stdlib.net;
 
 import java.io.IOException;
-import java.net.Inet6Address;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.nio.channels.ServerSocketChannel;
@@ -16,7 +13,7 @@ public class Server {
     int port = 11514;
     InetSocketAddress localv6 = new InetSocketAddress("::1",port);
     InetSocketAddress localv4 = new InetSocketAddress("127.0.0.1", port);
-    ByteBuffer bbufer = ByteBuffer.allocate(10000);
+    final ByteBuffer bbufer = ByteBuffer.allocate(10000);
     public Server() {}
     public static void main(String[] args) {
         System.setProperty("java.net.preferIPv6Addresses","true");
@@ -33,7 +30,9 @@ public class Server {
                 System.out.println("accept");
                 InetSocketAddress addr = (InetSocketAddress) channel.shutdownInput().getRemoteAddress();
                 System.out.println(addr);
-                send(addr, bbufer.clear().put(addr.getAddress().getAddress()));
+                bbufer.clear();
+                bbufer.put(addr.getAddress().getAddress());
+                send(addr, bbufer);
                 channel.close();
             }
         } catch (IOException e) {
@@ -52,7 +51,9 @@ public class Server {
                     System.out.println("accept");
                     InetSocketAddress addr = (InetSocketAddress) channel.shutdownInput().getRemoteAddress();
                     System.out.println(addr);
-                    send(addr, bbufer.clear().put(addr.getAddress().getAddress()));
+                    bbufer.clear();
+                    bbufer.put(addr.getAddress().getAddress());
+                    send(addr, bbufer);
                     channel.close();
                 }
             } catch (IOException e) {
