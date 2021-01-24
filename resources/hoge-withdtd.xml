@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE test [
         <!ELEMENT hoge (#PCDATA)>
-        <!ATTLIST hoge name CDATA>
-        <!ELEMENT test (hoge)>
+        <!ATTLIST hoge name CDATA #IMPLIED>
+        <!ELEMENT test (hoge|empty)*>
+        <!ELEMENT empty EMPTY>
         ]>
 <test xmlns="urn:test">
     <hoge name="test">test</hoge>
+    <empty/>
 </test>

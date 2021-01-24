@@ -1,0 +1,17 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="test">
+        <complexType mixed="true">
+            <choice maxOccurs="unbounded">
+                <element name="hoge">
+                    <complexType mixed="true">
+                        <attribute name="name" type="string"/>
+                    </complexType>
+                </element>
+                <element name="empty">
+                    <complexType>
+                    </complexType>
+                </element>
+            </choice>
+        </complexType>
+    </element>
+</schema>

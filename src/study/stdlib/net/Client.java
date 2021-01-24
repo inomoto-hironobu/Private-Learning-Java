@@ -1,6 +1,4 @@
-package study.stdlib.nio2;
-
-import study.stdlib.net.Server;
+package study.stdlib.net;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

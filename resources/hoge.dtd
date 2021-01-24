@@ -1,0 +1,5 @@
+<!ELEMENT hoge (#PCDATA)>
+<!ATTLIST hoge name CDATA #IMPLIED>
+<!ELEMENT empty EMPTY>
+<!ELEMENT test (hoge|empty)*>
+<!ATTLIST test xmlns CDATA #REQUIRED>

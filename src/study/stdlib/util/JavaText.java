@@ -1,6 +1,6 @@
-package site.saishin.study.java8;
+package study.stdlib.util;
 
-import java.text.SimpleDateFormat;
+import study.lang.TargetClass;
 
 @TargetClass
 public class JavaText {

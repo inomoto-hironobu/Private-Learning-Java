@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- hoge.xsdに対して妥当 -->
+<!DOCTYPE test SYSTEM "hoge.dtd">
+<test xmlns="urn:test">
+    <hoge name="test">test</hoge>
+    <empty/>
+</test>
